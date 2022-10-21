@@ -36,7 +36,7 @@ div section article p {
 div section:last-child article {
   color: green;
   border: 0.0625rem solid blue;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 div section:last-child article p {
   margin: 1rem 7.5rem 1rem 7.5rem;

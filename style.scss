@@ -45,13 +45,13 @@ div {
             }
 
             p {
-                padding: 1rem;
+                padding: f.rem(16);
                 text-align: center;
             }
             
         }
         &:last-child article {
-            @include theme ($color-tertiary, $color-secondary, 24px);      
+            @include theme ($color-tertiary, $color-secondary, f.rem(24));      
             p {
                 margin: f.rem(16) f.rem(120) f.rem(16) f.rem(120);
             }    
