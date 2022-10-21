@@ -1,0 +1,45 @@
+div {
+  display: flex;
+  flex-direction: column;
+  border: 0.0625rem solid red;
+  align-items: center;
+}
+div h1 {
+  color: green;
+  border-bottom: 0.125rem solid blue;
+}
+div section {
+  display: flex;
+  padding: 0 2rem 1.5rem 2rem;
+}
+div section article {
+  color: green;
+  border: 0.0625rem solid green;
+  font-size: 0.9375rem;
+}
+div section article:first-child {
+  color: blue;
+}
+div section article:nth-child(2) {
+  color: red;
+}
+div section article:nth-child(3) {
+  color: blue;
+}
+div section article:nth-child(4) {
+  color: red;
+}
+div section article p {
+  padding: 1rem;
+  text-align: center;
+}
+div section:last-child article {
+  color: green;
+  border: 0.0625rem solid blue;
+  font-size: 24px;
+}
+div section:last-child article p {
+  margin: 1rem 7.5rem 1rem 7.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

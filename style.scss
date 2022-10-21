@@ -1,0 +1,60 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+@use "function.scss" as f;
+
+@mixin theme( $color, $border-color, $font-size) {
+    color: $color;
+    border:  f.rem(1) solid $border-color;
+    font-size: $font-size;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    border: f.rem(1) solid $color-primary;
+    align-items: center;
+
+    h1 {
+        color: $color-tertiary;
+        border-bottom: f.rem(2) solid $color-secondary;
+    }
+
+    section {
+        display: flex;
+        padding: 0 f.rem(32) f.rem(24) f.rem(32);
+
+        article {
+            @include theme($color-tertiary, $color-tertiary, f.rem(15));
+
+            &:first-child {
+                color: $color-secondary;
+            }
+
+            &:nth-child(2) {
+                color: $color-primary;
+            }
+
+            &:nth-child(3) {
+                color: $color-secondary;
+            }
+
+            &:nth-child(4) {
+                color: $color-primary;
+            }
+
+            p {
+                padding: 1rem;
+                text-align: center;
+            }
+            
+        }
+        &:last-child article {
+            @include theme ($color-tertiary, $color-secondary, 24px);      
+            p {
+                margin: f.rem(16) f.rem(120) f.rem(16) f.rem(120);
+            }    
+        }
+    }
+}
